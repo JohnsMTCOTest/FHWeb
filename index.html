@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Johnson Funeral Home & Crematory provides compassionate funeral, memorial, and cremation care to families across the River Valley."
+    />
+    <title>Johnson Funeral Home &amp; Crematory | Honoring Every Life</title>
+    <script>
+      (function () {
+        try {
+          var storedTheme = localStorage.getItem('theme');
+          if (storedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+        } catch (error) {
+          /* localStorage unavailable */
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="top-bar">
+        <div class="container">
+          <span>24-Hour Compassionate Support</span>
+          <span>905 Willowbrook Lane, River Valley, IA 51501</span>
+          <a href="tel:17125551234">(712) 555-1234</a>
+        </div>
+      </div>
+      <div class="container navbar">
+        <a href="index.html" class="brand">Johnson <span>Funeral Home &amp; Crematory</span></a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          data-nav-toggle
+        >
+          &#9776;
+        </button>
+        <ul class="nav-links" data-nav-links>
+          <li><a href="#top" class="active">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="obituaries.html">Obituaries</a></li>
+          <li><a href="preplanning.html">Preplanning</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="nav-actions">
+            <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+              <span class="theme-toggle__icon" aria-hidden="true"></span>
+              <span class="theme-toggle__label" data-theme-toggle-label>Dark mode</span>
+            </button>
+            <button
+              class="btn btn-portal"
+              type="button"
+              data-portal-open
+              aria-haspopup="dialog"
+              aria-controls="family-portal"
+            >
+              Family Portal
+            </button>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1>Honoring Every Life with Compassion and Care</h1>
+            <p>
+              Johnson Funeral Home &amp; Crematory has walked alongside River Valley families for more than
+              60 years. We guide you through every detail of funeral, memorial, and cremation planning so you
+              can focus on what matters most&mdash;celebrating the life of your loved one.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="contact.html">Arrange a Service</a>
+              <a class="btn btn-secondary" href="preplanning.html">Plan Ahead</a>
+              <button
+                class="btn btn-portal"
+                type="button"
+                data-portal-open
+                aria-haspopup="dialog"
+                aria-controls="family-portal"
+              >
+                Family Portal
+              </button>
+            </div>
+          </div>
+          <div class="hero-highlights">
+            <article>
+              <h3>Licensed Funeral Directors</h3>
+              <p>
+                Experienced, thoughtful professionals committed to guiding your family with dignity and respect.
+              </p>
+            </article>
+            <article>
+              <h3>On-Site Crematory</h3>
+              <p>
+                Your loved one never leaves our care. Our state-of-the-art crematory ensures the highest standards
+                of stewardship.
+              </p>
+            </article>
+            <article>
+              <h3>Personal Tributes</h3>
+              <p>
+                From live streaming to custom keepsakes, we help you craft unique gatherings that reflect each life
+                beautifully.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="container">
+          <div class="section-header">
+            <span>Our Services</span>
+            <h2>Complete Funeral &amp; Cremation Care</h2>
+            <p>
+              Whether you prefer a traditional chapel service, an intimate gathering, or a celebration of life in a
+              meaningful location, we tailor every detail to honor your family's traditions.
+            </p>
+          </div>
+          <div class="card-grid">
+            <article class="card">
+              <h3>Funeral &amp; Memorial Services</h3>
+              <p>
+                Let us coordinate music, readings, clergy, veteran honors, and floral design to create a service that
+                shares your loved one's story.
+              </p>
+              <a class="card-link" href="services.html#funeral-services">Learn more</a>
+            </article>
+            <article class="card">
+              <h3>Cremation Options</h3>
+              <p>
+                Choose from private family viewings, witnessing ceremonies, and memorial packages with burial or
+                scattering assistance.
+              </p>
+              <a class="card-link" href="services.html#cremation">Explore cremation care</a>
+            </article>
+            <article class="card">
+              <h3>Celebrations of Life</h3>
+              <p>
+                Host a personalized gathering in our light-filled reception suite with catering, video tributes, and
+                keepsake displays.
+              </p>
+              <a class="card-link" href="services.html#celebrations">Plan a celebration</a>
+            </article>
+            <article class="card">
+              <h3>Aftercare Support</h3>
+              <p>
+                Access grief resources, local support groups, and guidance for estate and benefits paperwork long after
+                the service ends.
+              </p>
+              <a class="card-link" href="about.html#aftercare">Discover aftercare</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="obituaries">
+        <div class="container grid-two-column">
+          <div>
+            <div class="section-header" style="text-align: left; margin: 0">
+              <span>Recent Tributes</span>
+              <h2>Obituaries &amp; Service Details</h2>
+              <p>
+                View service times, leave condolences, and share cherished memories for the families we are currently
+                serving.
+              </p>
+            </div>
+            <a class="btn btn-primary" href="obituaries.html">View all obituaries</a>
+          </div>
+          <div class="highlight-banner">
+            <h3>How We Help Families Remember</h3>
+            <ul>
+              <li>Dedicated obituary team posting updates within hours</li>
+              <li>Complimentary memorial webpage for every family</li>
+              <li>Guestbook with photo and video sharing options</li>
+              <li>Automatic reminders for service dates and anniversaries</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="preplanning">
+        <div class="container grid-two-column">
+          <div class="highlight-banner">
+            <span class="badge">Plan Ahead</span>
+            <h3>Give the Gift of Clarity</h3>
+            <p>
+              Preplanning protects your family from unexpected decisions and financial stress. Our licensed team walks
+              you through preferences, funding, and vital documents with compassion and care.
+            </p>
+            <a class="btn btn-primary" href="preplanning.html">Start planning today</a>
+          </div>
+          <aside class="quote">
+            <p>
+              "Knowing Mom's wishes were in place helped us focus on celebrating her beautiful life. Johnson Funeral Home
+              was by our side through every step."
+            </p>
+            <footer>&mdash; The Ramirez Family</footer>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="facility">
+        <div class="container grid-two-column">
+          <div>
+            <div class="section-header" style="text-align: left; margin: 0">
+              <span>Our Facility</span>
+              <h2>Welcoming Spaces for Every Gathering</h2>
+            </div>
+            <p>
+              From our chapel with seating for 250 guests to private family suites and a warm reception lounge, Johnson
+              Funeral Home &amp; Crematory was designed for comfort. Technology-forward amenities include live-streaming,
+              media presentation systems, and an on-site crematory to keep your loved one in our care at all times.
+            </p>
+            <ul class="featured-list">
+              <li>Beautiful chapel with customizable lighting and audio</li>
+              <li>Dedicated hospitality team and catering partnerships</li>
+              <li>Garden courtyard for outdoor services and receptions</li>
+              <li>Children's comfort room with books, games, and supervision</li>
+            </ul>
+          </div>
+          <div class="contact-block">
+            <h3>Connect With Our Directors</h3>
+            <div class="contact-details">
+              <p><span>Phone:</span> <a href="tel:17125551234">(712) 555-1234</a></p>
+              <p><span>Email:</span> <a href="mailto:care@johnsonfuneralhome.com">care@johnsonfuneralhome.com</a></p>
+              <p><span>Visit:</span> 905 Willowbrook Lane, River Valley, IA 51501</p>
+            </div>
+            <div class="contact-actions">
+              <a class="btn btn-primary" href="contact.html">Schedule a visit</a>
+              <a class="btn btn-secondary" href="tel:17125551234">Call us anytime</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <h3>Johnson Funeral Home &amp; Crematory</h3>
+          <p>
+            Compassionately serving the River Valley and surrounding communities with funeral, memorial, and cremation
+            services since 1961.
+          </p>
+        </div>
+        <div>
+          <h4>Visit Us</h4>
+          <p>905 Willowbrook Lane<br />River Valley, IA 51501</p>
+          <p><a href="tel:17125551234">(712) 555-1234</a></p>
+        </div>
+        <div>
+          <h4>Helpful Links</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Services</a></li>
+            <li><a href="obituaries.html">Obituaries</a></li>
+            <li><a href="preplanning.html">Preplanning</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Office Hours</h4>
+          <p>Monday&ndash;Friday: 8:30am&ndash;6:00pm<br />Saturday: 9:00am&ndash;1:00pm<br />Available by appointment 24/7</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; <span id="year">2024</span> Johnson Funeral Home &amp; Crematory. All rights reserved.
+      </div>
+    </footer>
+    <div class="portal-modal" id="family-portal" data-portal-modal aria-hidden="true">
+      <div class="portal-modal__content" role="dialog" aria-modal="true" aria-labelledby="portal-title">
+        <header class="portal-modal__header">
+          <h2 id="portal-title">Family Portal</h2>
+          <button class="portal-modal__close" type="button" data-portal-close aria-label="Close family portal">&times;</button>
+        </header>
+        <div class="portal-modal__body">
+          <iframe src="https://thepassagecare.com" title="Family Portal - The Passage Care" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
