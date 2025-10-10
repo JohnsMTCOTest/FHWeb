@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en" data-theme="light">
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -8,6 +9,18 @@
       content="Begin preplanning with Johnson Funeral Home & Crematory to document your wishes and protect your family."
     />
     <title>Preplanning Guide | Johnson Funeral Home &amp; Crematory</title>
+    <script>
+      (function () {
+        try {
+          var storedTheme = localStorage.getItem('theme');
+          if (storedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+        } catch (error) {
+          /* localStorage unavailable */
+        }
+      })();
+    </script>
     <link rel="stylesheet" href="assets/css/site.css" />
     <script src="assets/js/main.js" defer></script>
   </head>

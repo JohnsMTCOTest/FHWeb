@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en" data-theme="light">
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -8,6 +9,18 @@
       content="Johnson Funeral Home & Crematory provides compassionate funeral, memorial, and cremation care to families across the River Valley."
     />
     <title>Johnson Funeral Home &amp; Crematory | Honoring Every Life</title>
+    <script>
+      (function () {
+        try {
+          var storedTheme = localStorage.getItem('theme');
+          if (storedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+        } catch (error) {
+          /* localStorage unavailable */
+        }
+      })();
+    </script>
     <link rel="stylesheet" href="assets/css/site.css" />
     <script src="assets/js/main.js" defer></script>
   </head>

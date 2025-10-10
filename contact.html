@@ -1,10 +1,23 @@
 <!DOCTYPE html>
+<html lang="en" data-theme="light">
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Contact Johnson Funeral Home & Crematory for immediate assistance or to schedule a visit." />
     <title>Contact | Johnson Funeral Home &amp; Crematory</title>
+    <script>
+      (function () {
+        try {
+          var storedTheme = localStorage.getItem('theme');
+          if (storedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+        } catch (error) {
+          /* localStorage unavailable */
+        }
+      })();
+    </script>
     <link rel="stylesheet" href="assets/css/site.css" />
     <script src="assets/js/main.js" defer></script>
   </head>
