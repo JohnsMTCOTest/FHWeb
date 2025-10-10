@@ -12,6 +12,7 @@ This repository contains a fully static marketing website for **Johnson Funeral 
 │   ├── images              # Existing artwork from the legacy theme
 │   └── js
 │       └── main.js         # Navigation toggle, smooth scrolling, dark mode, and family portal logic
+│       └── main.js         # Navigation toggle and smooth scrolling
 ├── index.html              # Homepage with service highlights
 ├── about.html              # History, mission, and team
 ├── services.html           # Detailed funeral, memorial, and cremation offerings
