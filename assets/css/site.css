@@ -14,6 +14,11 @@
   --surface-alt: #f3f6fa;
   --surface-border: rgba(15, 39, 64, 0.08);
   --overlay: rgba(13, 22, 36, 0.65);
+  --body-bg: #ffffff;
+  --nav-surface: #ffffff;
+  --surface: #ffffff;
+  --surface-alt: #f3f6fa;
+  --surface-border: rgba(15, 39, 64, 0.06);
   --max-width: 1140px;
   --transition: all 0.3s ease;
   color-scheme: light;
@@ -23,6 +28,7 @@
 :root[data-theme="dark"] {
   --primary: #d8e4f5;
   --primary-dark: #03070f;
+  --primary-dark: #040910;
   --accent: #d7ba7a;
   --light: rgba(215, 186, 122, 0.12);
   --muted: #a7b4c5;
@@ -37,6 +43,19 @@
   color-scheme: dark;
 }
 
+  --body-bg: #070f1c;
+  --nav-surface: rgba(9, 14, 22, 0.95);
+  --surface: rgba(15, 23, 35, 0.98);
+  --surface-alt: rgba(255, 255, 255, 0.04);
+  --surface-border: rgba(255, 255, 255, 0.12);
+  color-scheme: dark;
+}
+
+  --max-width: 1140px;
+  --transition: all 0.3s ease;
+  font-size: 16px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -49,6 +68,8 @@ body {
   background-color: var(--body-bg);
   line-height: 1.6;
   transition: background-color 0.35s ease, color 0.35s ease;
+  background-color: #ffffff;
+  line-height: 1.6;
 }
 
 a {
@@ -83,6 +104,7 @@ a:focus {
 
 .site-header {
   background: var(--nav-surface);
+  background: #ffffff;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -97,6 +119,7 @@ a:focus {
   gap: 1.5rem;
   padding: 1rem 0;
   position: relative;
+  padding: 1rem 0;
 }
 
 .brand {
@@ -157,6 +180,9 @@ a:focus {
 
 .nav-links li.nav-actions .btn-portal {
   min-height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
 }
 
 .nav-links li.nav-actions .btn,
@@ -215,6 +241,13 @@ a:focus {
   background: transparent;
   border-color: rgba(15, 39, 64, 0.18);
   color: var(--primary);
+  background: linear-gradient(135deg, var(--accent), #e4c887);
+  color: #1d1a15;
+  border-color: transparent;
+  box-shadow: 0 12px 24px rgba(198, 161, 96, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
 }
 
 .btn-portal:hover,
@@ -278,6 +311,24 @@ a:focus {
 .highlight-banner .btn-primary:hover,
 .highlight-banner .btn-primary:focus {
   box-shadow: none;
+  box-shadow: 0 16px 32px rgba(198, 161, 96, 0.35);
+  transform: translateY(-2px);
+  color: #1d1a15;
+}
+
+.btn-portal::after {
+  content: "\2197";
+  font-size: 0.85rem;
+  transition: var(--transition);
+}
+
+.btn-portal:hover::after,
+.btn-portal:focus::after {
+  transform: translate(2px, -2px);
+}
+
+.nav-links .btn-portal {
+  padding: 0.6rem 1.35rem;
 }
 
 .nav-links a::after {
@@ -303,6 +354,7 @@ a:focus {
   border: none;
   font-size: 1.75rem;
   color: var(--text);
+  color: var(--primary);
   cursor: pointer;
 }
 
@@ -359,6 +411,18 @@ a:focus {
   background: var(--primary);
   border-color: var(--primary);
   color: #ffffff;
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #1f1f1f;
 }
 
 .btn-primary:hover,
@@ -372,6 +436,13 @@ a:focus {
   background: transparent;
   border-color: rgba(15, 39, 64, 0.18);
   color: var(--primary);
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.btn-secondary {
+  border-color: var(--accent);
+  color: #ffffff;
 }
 
 .btn-secondary:hover,
@@ -379,6 +450,8 @@ a:focus {
   background: rgba(15, 39, 64, 0.08);
   border-color: var(--primary);
   color: var(--primary);
+  background: var(--accent);
+  color: #1f1f1f;
 }
 
 .hero-highlights {
@@ -431,6 +504,10 @@ a:focus {
   font-size: 0.82rem;
   letter-spacing: 0.18em;
   font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
 }
 
 .section-header h2 {
@@ -444,6 +521,8 @@ a:focus {
   max-width: 40rem;
   margin: 0.9rem auto 0;
   color: var(--text-subtle);
+  margin: 0.75rem auto 0;
+  color: var(--muted);
 }
 
 .card-grid {
@@ -458,6 +537,11 @@ a:focus {
   padding: 2rem;
   box-shadow: 0 16px 32px rgba(15, 39, 64, 0.06);
   border: 1px solid var(--surface-border);
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 16px 32px rgba(15, 39, 64, 0.06);
+  border: 1px solid rgba(15, 39, 64, 0.04);
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -477,6 +561,7 @@ a:focus {
 
 .card p {
   color: var(--text-subtle);
+  color: var(--muted);
   flex: 1;
 }
 
@@ -504,6 +589,7 @@ a:focus {
   display: grid;
   gap: 0.75rem;
   color: var(--text-subtle);
+  color: var(--muted);
   list-style: none;
 }
 
@@ -523,6 +609,7 @@ a:focus {
 
 .quote {
   background: linear-gradient(135deg, rgba(15, 39, 64, 0.92), rgba(15, 39, 64, 0.82));
+  background: #0f2740;
   color: #ffffff;
   padding: 3rem;
   border-radius: 1.5rem;
@@ -553,6 +640,7 @@ a:focus {
 
 .contact-block {
   background: var(--surface);
+  background: #ffffff;
   border-radius: 1.5rem;
   padding: 2.5rem;
   box-shadow: 0 12px 32px rgba(15, 39, 64, 0.1);
@@ -569,6 +657,7 @@ a:focus {
   display: grid;
   gap: 1rem;
   color: var(--text-subtle);
+  color: var(--muted);
 }
 
 .contact-details span {
@@ -652,6 +741,7 @@ footer {
 .lead {
   font-size: 1.125rem;
   color: var(--text-subtle);
+  color: var(--muted);
   margin-bottom: 2.5rem;
 }
 
@@ -667,6 +757,8 @@ footer {
   border-radius: 1rem;
   background: var(--surface-alt);
   border: 1px solid var(--surface-border);
+  background: rgba(15, 39, 64, 0.04);
+  border: 1px solid rgba(15, 39, 64, 0.08);
 }
 
 .split {
@@ -702,6 +794,10 @@ blockquote cite {
   border-radius: 1rem;
   padding: 1.75rem;
   background: var(--surface);
+  border: 1px solid rgba(15, 39, 64, 0.08);
+  border-radius: 1rem;
+  padding: 1.75rem;
+  background: #ffffff;
   box-shadow: 0 10px 24px rgba(15, 39, 64, 0.05);
 }
 
@@ -733,6 +829,7 @@ blockquote cite {
 
 .table th {
   background: var(--surface-alt);
+  background: rgba(15, 39, 64, 0.05);
   font-weight: 600;
 }
 
@@ -744,6 +841,7 @@ blockquote cite {
 
 .contact-page form {
   background: var(--surface);
+  background: #ffffff;
   padding: 2rem;
   border-radius: 1.5rem;
   box-shadow: 0 12px 32px rgba(15, 39, 64, 0.08);
@@ -775,6 +873,7 @@ blockquote cite {
 .form-disclaimer {
   font-size: 0.85rem;
   color: var(--text-subtle);
+  color: var(--muted);
   line-height: 1.4;
 }
 
@@ -782,6 +881,7 @@ blockquote cite {
   display: inline-block;
   background: rgba(15, 39, 64, 0.08);
   border: 1px solid rgba(15, 39, 64, 0.15);
+  background: rgba(198, 161, 96, 0.2);
   color: var(--primary);
   padding: 0.25rem 0.75rem;
   border-radius: 999px;
@@ -802,6 +902,7 @@ body.portal-open {
   justify-content: center;
   padding: 2.5rem 1.5rem;
   background: var(--overlay);
+  background: rgba(5, 10, 18, 0.7);
   backdrop-filter: blur(8px);
   opacity: 0;
   pointer-events: none;
@@ -900,6 +1001,7 @@ body.portal-open {
 
 :root[data-theme="dark"] .section-header span {
   background: rgba(6, 13, 24, 0.85);
+  background: rgba(216, 228, 245, 0.12);
   border-color: rgba(216, 228, 245, 0.28);
   color: var(--primary);
 }
@@ -954,6 +1056,11 @@ body.portal-open {
 
 :root[data-theme="dark"] blockquote cite {
   color: var(--accent);
+}
+
+  background: rgba(216, 228, 245, 0.12);
+  border-color: rgba(216, 228, 245, 0.28);
+  color: var(--primary);
 }
 
 :root[data-theme="dark"] .quote {
@@ -1104,6 +1211,10 @@ body.portal-open {
     padding: 1.5rem;
     box-shadow: 0 12px 32px rgba(15, 39, 64, 0.1);
     border: 1px solid rgba(15, 39, 64, 0.08);
+    background: #ffffff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 12px 32px rgba(15, 39, 64, 0.1);
     flex-direction: column;
     gap: 1rem;
     opacity: 0;
