@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="View current and past obituaries served by Johnson Funeral Home & Crematory."
+    />
+    <title>Obituaries | Johnson Funeral Home &amp; Crematory</title>
+    <script>
+      (function () {
+        try {
+          var storedTheme = localStorage.getItem('theme');
+          if (storedTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+        } catch (error) {
+          /* localStorage unavailable */
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="top-bar">
+        <div class="container">
+          <span>24-Hour Compassionate Support</span>
+          <span>905 Willowbrook Lane, River Valley, IA 51501</span>
+          <a href="tel:17125551234">(712) 555-1234</a>
+        </div>
+      </div>
+      <div class="container navbar">
+        <a href="index.html" class="brand">Johnson <span>Funeral Home &amp; Crematory</span></a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          data-nav-toggle
+        >
+          &#9776;
+        </button>
+        <ul class="nav-links" data-nav-links>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a class="active" href="obituaries.html">Obituaries</a></li>
+          <li><a href="preplanning.html">Preplanning</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="nav-actions">
+            <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+              <span class="theme-toggle__icon" aria-hidden="true"></span>
+              <span class="theme-toggle__label" data-theme-toggle-label>Dark mode</span>
+            </button>
+            <button
+              class="btn btn-portal"
+              type="button"
+              data-portal-open
+              aria-haspopup="dialog"
+              aria-controls="family-portal"
+            >
+              Family Portal
+            </button>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <h1>Honoring the Lives We Serve</h1>
+          <p>
+            We invite you to read tributes, leave condolences, and find service information for families in our care.
+          </p>
+        </div>
+      </section>
+
+      <section class="page-content">
+        <div class="container">
+          <div class="obituary-list">
+            <article class="obituary-card">
+              <h3>Harold "Hal" Peterson</h3>
+              <time datetime="2024-05-12">May 12, 2024</time>
+              <p>
+                Loving husband, grandfather, and Korean War veteran. Service with military honors on May 17 at 11:00am in
+                the Johnson Chapel. Visitation Thursday evening from 5:00&ndash;7:00pm.
+              </p>
+              <p class="badge">Leave condolences</p>
+            </article>
+            <article class="obituary-card">
+              <h3>Sophia Ramirez</h3>
+              <time datetime="2024-05-04">May 4, 2024</time>
+              <p>
+                Artist, mentor, and beloved friend to many. Celebration of life Saturday, May 18 at 2:00pm with reception
+                to follow in the Willowbrook Suite.
+              </p>
+              <p class="badge">Share memories</p>
+            </article>
+            <article class="obituary-card">
+              <h3>Dr. Charles Okafor</h3>
+              <time datetime="2024-04-29">April 29, 2024</time>
+              <p>
+                Compassionate physician and community volunteer. Memorial Mass Friday, May 10 at St. Helena Catholic
+                Church. Johnson Funeral Home assisting the family.
+              </p>
+              <p class="badge">Service complete</p>
+            </article>
+            <article class="obituary-card">
+              <h3>Emily Carson</h3>
+              <time datetime="2024-04-14">April 14, 2024</time>
+              <p>
+                Adventurous traveler and musician. Private family gathering with live stream on April 20. Memorial fund in
+                her honor supports River Valley Youth Music.
+              </p>
+              <p class="badge">Watch service replay</p>
+            </article>
+            <article class="obituary-card">
+              <h3>Raymond "Ray" Brooks</h3>
+              <time datetime="2024-03-30">March 30, 2024</time>
+              <p>
+                Skilled craftsman, gardener, and proud grandfather of eight. Graveside service Tuesday, April 9 at
+                Willowbrook Cemetery.
+              </p>
+              <p class="badge">View directions</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <h3>Johnson Funeral Home &amp; Crematory</h3>
+          <p>Honoring lives and supporting families with care.</p>
+        </div>
+        <div>
+          <h4>Visit Us</h4>
+          <p>905 Willowbrook Lane<br />River Valley, IA 51501</p>
+          <p><a href="tel:17125551234">(712) 555-1234</a></p>
+        </div>
+        <div>
+          <h4>Helpful Links</h4>
+          <ul class="footer-links">
+            <li><a href="services.html">Services</a></li>
+            <li><a href="obituaries.html">Obituaries</a></li>
+            <li><a href="preplanning.html">Preplanning</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Office Hours</h4>
+          <p>Monday&ndash;Friday: 8:30am&ndash;6:00pm<br />Saturday: 9:00am&ndash;1:00pm<br />On-call 24/7</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; <span id="year">2024</span> Johnson Funeral Home &amp; Crematory. All rights reserved.
+      </div>
+    </footer>
+    <div class="portal-modal" id="family-portal" data-portal-modal aria-hidden="true">
+      <div class="portal-modal__content" role="dialog" aria-modal="true" aria-labelledby="portal-title">
+        <header class="portal-modal__header">
+          <h2 id="portal-title">Family Portal</h2>
+          <button class="portal-modal__close" type="button" data-portal-close aria-label="Close family portal">&times;</button>
+        </header>
+        <div class="portal-modal__body">
+          <iframe src="https://thepassagecare.com" title="Family Portal - The Passage Care" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
