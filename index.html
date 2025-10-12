@@ -286,13 +286,31 @@
           <h2 id="portal-title">Family Portal</h2>
           <button class="portal-modal__close" type="button" data-portal-close aria-label="Close family portal">&times;</button>
         </header>
-        <div class="portal-modal__body">
-          <iframe src="https://thepassagecare.com" title="Family Portal - The Passage Care" loading="lazy"></iframe>
-        </div>
+       <div class="portal-modal__body">
+  <div id="passagecare-root"></div>
+</div>
       </div>
     </div>
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
+    <script>
+  // Dynamically load the widget script for testing
+  (function() {
+    // Create a script element
+    const script = document.createElement('script');
+    script.src = 'https://thepassagecare.com/widget.js'; // For testing, can use a static test bundle
+    script.onload = () => {
+      // Initialize the widget
+      PassageCare.init({
+        container: '#passagecare-root', // Mount inside modal div
+        apiBase: 'https://tanner-johnsons-projects-e0643517.vercel.app/api', // your Vercel project link
+        apiKey: 'TEST_KEY', // dummy key for testing
+        autoTheme: true // adopt FHWeb colors/fonts
+      });
+    };
+    document.body.appendChild(script);
+  })();
+</script>
   </body>
 </html>
