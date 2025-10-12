@@ -296,21 +296,38 @@
     </script>
     <script>
   // Dynamically load the widget script for testing
-  (function() {
-    // Create a script element
+  <script>
+  (function () {
+    // Prevent duplicate loading
+    if (window.PassageCareLoaded) return;
+    window.PassageCareLoaded = true;
+
+    // Create script tag for Passage Care widget
     const script = document.createElement('script');
-    script.src = 'https://thepassagecare.com/widget.js'; // For testing, can use a static test bundle
-    script.onload = () => {
+    script.src = 'https://thepassagecare.com/widget.js';
+    script.async = true;
+
+    script.onload = function () {
+      if (typeof PassageCare === 'undefined') {
+        console.error('PassageCare widget failed to load.');
+        return;
+      }
+
       // Initialize the widget
       PassageCare.init({
-        container: '#passagecare-root', // Mount inside modal div
-        apiBase: 'https://tanner-johnsons-projects-e0643517.vercel.app/api', // your Vercel project link
-        apiKey: 'TEST_KEY', // dummy key for testing
-        autoTheme: true // adopt FHWeb colors/fonts
+        container: '#passagecare-root',
+        apiBase: 'https://tanner-johnsons-projects-e0643517.vercel.app/api',
+        apiKey: 'TEST_KEY',
+        autoTheme: true,
+        themeOptions: {
+          detectFromParent: true,
+          fontFamily: getComputedStyle(document.body).fontFamily,
+          primaryColor: getComputedStyle(document.querySelector('.btn-primary')).backgroundColor,
+          backgroundColor: getComputedStyle(document.body).backgroundColor,
+        },
       });
     };
+
     document.body.appendChild(script);
   })();
 </script>
-  </body>
-</html>
