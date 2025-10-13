@@ -22,6 +22,8 @@
     </script>
     <link rel="stylesheet" href="assets/css/site.css" />
     <script src="assets/js/main.js" defer></script>
+    <!-- Passage Embed Script -->
+    <script src="assets/js/passage-embed.js" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -55,7 +57,10 @@
               <span class="theme-toggle__icon" aria-hidden="true"></span>
               <span class="theme-toggle__label" data-theme-toggle-label>Dark mode</span>
             </button>
-            <button class="btn btn-portal" type="button">
+            <button
+              class="btn btn-portal"
+              type="button"
+            >
               Family Portal
             </button>
           </li>
@@ -162,8 +167,7 @@
         </div>
       </section>
 
-      <!-- ...rest of your sections like obituaries, preplanning, facility... -->
-
+      <!-- Other sections like obituaries, preplanning, facility... -->
     </main>
 
     <footer>
@@ -203,61 +207,23 @@
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
 
-      // Scroll to Family Portal section
+      // Scroll from portal button to the embedded Family Portal
       document.querySelectorAll('.btn-portal').forEach(btn => {
         btn.addEventListener('click', () => {
           const portal = document.getElementById('passagecare-section');
           if (portal) portal.scrollIntoView({ behavior: 'smooth' });
         });
       });
-    </script>
 
-    <!-- Native Passage Care Embed -->
-    <script>
-      (function() {
-        if (window.PassageCareLoaded) return;
-        window.PassageCareLoaded = true;
-
-        const script = document.createElement('script');
-        script.src = 'https://thepassagecare.com/embed.js';
-        script.async = true;
-
-        script.onload = function() {
-          if (typeof PassageCare === 'undefined') {
-            console.error('PassageCare failed to load.');
-            return;
-          }
-
-          // Wait for container to be rendered
-          requestAnimationFrame(() => {
-            const container = document.getElementById('passagecare-root');
-            if (!container) {
-              console.error('PassageCare container not found!');
-              return;
-            }
-
-            const computedStyles = getComputedStyle(container);
-            const fontFamily = computedStyles.fontFamily || 'inherit';
-            const primaryColor = computedStyles.getPropertyValue('--primary-color') || '#2c3e50';
-            const backgroundColor = computedStyles.backgroundColor || '#f9f9f9';
-
-            PassageCare.init({
-              container: '#passagecare-root',
-              apiBase: 'https://tanner-johnsons-projects-e0643517.vercel.app/api',
-              apiKey: 'TEST_KEY',
-              autoTheme: true,
-              themeOptions: {
-                detectFromParent: true,
-                fontFamily,
-                primaryColor,
-                backgroundColor
-              }
-            });
-          });
-        };
-
-        document.body.appendChild(script);
-      })();
+      // Initialize Passage Embed
+      window.addEventListener('DOMContentLoaded', () => {
+        const embed = new PassageEmbed({
+          funeralHomeId: 'TEST_FH',  // Replace with real FH ID for live deployment
+          apiKey: 'TEST_KEY',        // Replace with valid API key
+          containerId: 'passagecare-root',
+        });
+        embed.render();
+      });
     </script>
   </body>
 </html>
