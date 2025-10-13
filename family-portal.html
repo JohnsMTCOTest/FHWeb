@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Family Portal | Johnson Funeral Home &amp; Crematory</title>
+    <link rel="stylesheet" href="assets/css/site.css" />
+    <script src="assets/js/main.js" defer></script>
+    <style>
+      main {
+        padding: 4rem 0;
+      }
+      #passagecare-app {
+        min-height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+      }
+      .loading {
+        text-align: center;
+        font-size: 1.2rem;
+        color: #555;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container navbar">
+        <a href="index.html" class="brand">Johnson <span>Funeral Home &amp; Crematory</span></a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="obituaries.html">Obituaries</a></li>
+          <li><a href="preplanning.html">Preplanning</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <h1>Family Portal</h1>
+        <div id="passagecare-app" class="loading">Loading Family Portal...</div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; <span id="year"></span> Johnson Funeral Home &amp; Crematory. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // TEST version (no API key needed)
+      const container = document.getElementById('passagecare-app');
+      const passageAppUrl = 'https://thepassagecare.com'; // you can change this to localhost:3000 if testing locally
+
+      // Simulate a “native” embed by fully loading the app into this page
+      fetch(passageAppUrl)
+        .then(response => {
+          if (!response.ok) throw new Error('Page not found');
+          return response.text();
+        })
+        .then(html => {
+          container.innerHTML = html;
+        })
+        .catch(() => {
+          container.innerHTML =
+            '<p>Unable to load the Family Portal. Please check your PassageCare deployment or URL.</p>';
+        });
+    </script>
+  </body>
+</html>
