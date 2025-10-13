@@ -8,7 +8,6 @@
       content="Johnson Funeral Home & Crematory provides compassionate funeral, memorial, and cremation care to families across the River Valley."
     />
     <title>Johnson Funeral Home &amp; Crematory | Honoring Every Life</title>
-
     <script>
       (function () {
         try {
@@ -21,32 +20,9 @@
         }
       })();
     </script>
-
     <link rel="stylesheet" href="assets/css/site.css" />
     <script src="assets/js/main.js" defer></script>
-
-    <style>
-      /* Seamless Passage Care Section Styles */
-      #passagecare-section {
-        padding: 3rem 0;
-        background-color: var(--background-color, #f9f9f9);
-        font-family: inherit;
-      }
-
-      #passagecare-section h2 {
-        text-align: center;
-        margin-bottom: 2rem;
-        color: var(--primary-color, #2c3e50);
-      }
-
-      #passagecare-root {
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-    </style>
   </head>
-
   <body>
     <header class="site-header">
       <div class="top-bar">
@@ -56,7 +32,6 @@
           <a href="tel:17125551234">(712) 555-1234</a>
         </div>
       </div>
-
       <div class="container navbar">
         <a href="index.html" class="brand">Johnson <span>Funeral Home &amp; Crematory</span></a>
         <button
@@ -80,7 +55,9 @@
               <span class="theme-toggle__icon" aria-hidden="true"></span>
               <span class="theme-toggle__label" data-theme-toggle-label>Dark mode</span>
             </button>
-            <button class="btn btn-portal" type="button">Family Portal</button>
+            <button class="btn btn-portal" type="button">
+              Family Portal
+            </button>
           </li>
         </ul>
       </div>
@@ -100,7 +77,9 @@
             <div class="hero-actions">
               <a class="btn btn-primary" href="contact.html">Arrange a Service</a>
               <a class="btn btn-secondary" href="preplanning.html">Plan Ahead</a>
-              <button class="btn btn-portal" type="button">Family Portal</button>
+              <button class="btn btn-portal" type="button">
+                Family Portal
+              </button>
             </div>
           </div>
           <div class="hero-highlights">
@@ -128,7 +107,7 @@
         </div>
       </section>
 
-      <!-- Integrated Passage Care Section -->
+      <!-- Family Portal Section -->
       <section id="passagecare-section" class="section">
         <div class="container">
           <h2>Family Portal</h2>
@@ -183,7 +162,7 @@
         </div>
       </section>
 
-      <!-- Other sections like obituaries, preplanning, facility can remain unchanged -->
+      <!-- ...rest of your sections like obituaries, preplanning, facility... -->
 
     </main>
 
@@ -222,10 +201,9 @@
     </footer>
 
     <script>
-      // Set current year
       document.getElementById('year').textContent = new Date().getFullYear();
 
-      // Smooth scroll from portal button to embedded section
+      // Scroll to Family Portal section
       document.querySelectorAll('.btn-portal').forEach(btn => {
         btn.addEventListener('click', () => {
           const portal = document.getElementById('passagecare-section');
@@ -234,7 +212,52 @@
       });
     </script>
 
-    <!-- Passage Care Embed -->
-    <script src="https://thepassagecare.com/embed.js" data-funeralhome-id="TEST_FH"></script>
+    <!-- Native Passage Care Embed -->
+    <script>
+      (function() {
+        if (window.PassageCareLoaded) return;
+        window.PassageCareLoaded = true;
+
+        const script = document.createElement('script');
+        script.src = 'https://thepassagecare.com/embed.js';
+        script.async = true;
+
+        script.onload = function() {
+          if (typeof PassageCare === 'undefined') {
+            console.error('PassageCare failed to load.');
+            return;
+          }
+
+          // Wait for container to be rendered
+          requestAnimationFrame(() => {
+            const container = document.getElementById('passagecare-root');
+            if (!container) {
+              console.error('PassageCare container not found!');
+              return;
+            }
+
+            const computedStyles = getComputedStyle(container);
+            const fontFamily = computedStyles.fontFamily || 'inherit';
+            const primaryColor = computedStyles.getPropertyValue('--primary-color') || '#2c3e50';
+            const backgroundColor = computedStyles.backgroundColor || '#f9f9f9';
+
+            PassageCare.init({
+              container: '#passagecare-root',
+              apiBase: 'https://tanner-johnsons-projects-e0643517.vercel.app/api',
+              apiKey: 'TEST_KEY',
+              autoTheme: true,
+              themeOptions: {
+                detectFromParent: true,
+                fontFamily,
+                primaryColor,
+                backgroundColor
+              }
+            });
+          });
+        };
+
+        document.body.appendChild(script);
+      })();
+    </script>
   </body>
 </html>
