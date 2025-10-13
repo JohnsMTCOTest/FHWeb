@@ -8,6 +8,7 @@
       content="Johnson Funeral Home & Crematory provides compassionate funeral, memorial, and cremation care to families across the River Valley."
     />
     <title>Johnson Funeral Home &amp; Crematory | Honoring Every Life</title>
+
     <script>
       (function () {
         try {
@@ -20,9 +21,32 @@
         }
       })();
     </script>
+
     <link rel="stylesheet" href="assets/css/site.css" />
     <script src="assets/js/main.js" defer></script>
+
+    <style>
+      /* Seamless Passage Care Section Styles */
+      #passagecare-section {
+        padding: 3rem 0;
+        background-color: var(--background-color, #f9f9f9);
+        font-family: inherit;
+      }
+
+      #passagecare-section h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+        color: var(--primary-color, #2c3e50);
+      }
+
+      #passagecare-root {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+    </style>
   </head>
+
   <body>
     <header class="site-header">
       <div class="top-bar">
@@ -32,6 +56,7 @@
           <a href="tel:17125551234">(712) 555-1234</a>
         </div>
       </div>
+
       <div class="container navbar">
         <a href="index.html" class="brand">Johnson <span>Funeral Home &amp; Crematory</span></a>
         <button
@@ -55,12 +80,7 @@
               <span class="theme-toggle__icon" aria-hidden="true"></span>
               <span class="theme-toggle__label" data-theme-toggle-label>Dark mode</span>
             </button>
-            <button
-              class="btn btn-portal"
-              type="button"
-            >
-              Family Portal
-            </button>
+            <button class="btn btn-portal" type="button">Family Portal</button>
           </li>
         </ul>
       </div>
@@ -80,9 +100,7 @@
             <div class="hero-actions">
               <a class="btn btn-primary" href="contact.html">Arrange a Service</a>
               <a class="btn btn-secondary" href="preplanning.html">Plan Ahead</a>
-              <button class="btn btn-portal" type="button">
-                Family Portal
-              </button>
+              <button class="btn btn-portal" type="button">Family Portal</button>
             </div>
           </div>
           <div class="hero-highlights">
@@ -110,7 +128,7 @@
         </div>
       </section>
 
-      <!-- Family Portal Section inserted right after hero -->
+      <!-- Integrated Passage Care Section -->
       <section id="passagecare-section" class="section">
         <div class="container">
           <h2>Family Portal</h2>
@@ -165,7 +183,7 @@
         </div>
       </section>
 
-      <!-- ...rest of your sections like obituaries, preplanning, facility... -->
+      <!-- Other sections like obituaries, preplanning, facility can remain unchanged -->
 
     </main>
 
@@ -204,6 +222,7 @@
     </footer>
 
     <script>
+      // Set current year
       document.getElementById('year').textContent = new Date().getFullYear();
 
       // Smooth scroll from portal button to embedded section
@@ -215,7 +234,7 @@
       });
     </script>
 
-    <!-- Autonomous embed.js -->
+    <!-- Passage Care Embed -->
     <script src="https://thepassagecare.com/embed.js" data-funeralhome-id="TEST_FH"></script>
   </body>
 </html>
