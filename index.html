@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
   <head>
@@ -56,9 +55,7 @@
               <span class="theme-toggle__icon" aria-hidden="true"></span>
               <span class="theme-toggle__label" data-theme-toggle-label>Dark mode</span>
             </button>
-            <button class="btn btn-portal" type="button">
-              Family Portal
-            </button>
+            <button class="btn btn-portal" type="button">Family Portal</button>
           </li>
         </ul>
       </div>
@@ -78,9 +75,7 @@
             <div class="hero-actions">
               <a class="btn btn-primary" href="contact.html">Arrange a Service</a>
               <a class="btn btn-secondary" href="preplanning.html">Plan Ahead</a>
-              <button class="btn btn-portal" type="button">
-                Family Portal
-              </button>
+              <button class="btn btn-portal" type="button">Family Portal</button>
             </div>
           </div>
           <div class="hero-highlights">
@@ -162,10 +157,6 @@
           </div>
         </div>
       </section>
-
-      <!-- Remaining sections like obituaries, preplanning, facility, etc. -->
-      <!-- Keep your original sections here unchanged -->
-
     </main>
 
     <footer>
@@ -205,31 +196,57 @@
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
 
-      // Smooth scroll from portal button to embedded section
+      // Family Portal buttons scroll to embedded portal section
       document.querySelectorAll('.btn-portal').forEach(btn => {
         btn.addEventListener('click', () => {
           const portal = document.getElementById('passagecare-section');
           if (portal) portal.scrollIntoView({ behavior: 'smooth' });
         });
       });
-    </script>
 
-    <!-- PassageCare Embed -->
-    <script src="https://thepassagecare.com/passage-embed.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const portal = new PassageEmbed({
-          funeralHomeId: 'TEST_FH',       // Replace with real funeral home ID
-          apiKey: 'TEST_KEY',              // Replace with real API key
-          containerId: 'passagecare-root',
-          themeOptions: {
-            fontFamily: getComputedStyle(document.body).fontFamily,
-            backgroundColor: getComputedStyle(document.body).backgroundColor,
-            primaryColor: getComputedStyle(document.querySelector('.btn-primary')).backgroundColor,
-          }
-        });
-        portal.render();
-      });
+      // ---------- Embed Loader ----------
+      (function () {
+        const container = document.getElementById('passagecare-root');
+        if (!container) return;
+
+        const iframe = document.createElement('iframe');
+        iframe.style.width = '100%';
+        iframe.style.height = '600px';
+        iframe.style.border = 'none';
+        iframe.style.borderRadius = '8px';
+        container.appendChild(iframe);
+
+        // Auto-match site colors and fonts
+        function applyStyles() {
+          const doc = iframe.contentDocument || iframe.contentWindow.document;
+          if (!doc) return;
+          const primaryColor = getComputedStyle(document.querySelector('.btn-primary')).backgroundColor;
+          const bgColor = getComputedStyle(document.body).backgroundColor;
+          const fontFamily = getComputedStyle(document.body).fontFamily;
+
+          const style = doc.createElement('style');
+          style.innerHTML = `
+            body { background-color: ${bgColor}; font-family: ${fontFamily}; }
+            .btn { background-color: ${primaryColor}; color: white; }
+          `;
+          doc.head.appendChild(style);
+        }
+
+        // Check for real API key / funeralHomeId
+        const FUNERAL_HOME_ID = window.PASSAGE_FH_ID || null;
+        const API_KEY = window.PASSAGE_API_KEY || null;
+
+        if (FUNERAL_HOME_ID && API_KEY) {
+          // Live portal
+          iframe.src = `https://thepassagecare.com/track?embed=true&fh=${FUNERAL_HOME_ID}&key=${API_KEY}`;
+        } else {
+          // Demo portal
+          iframe.src = 'https://thepassagecare.com/demo-embed?funeralHomeId=TEST_FH';
+        }
+
+        // Apply styles after iframe loads
+        iframe.addEventListener('load', applyStyles);
+      })();
     </script>
   </body>
 </html>
