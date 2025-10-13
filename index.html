@@ -8,7 +8,6 @@
       content="Johnson Funeral Home & Crematory provides compassionate funeral, memorial, and cremation care to families across the River Valley."
     />
     <title>Johnson Funeral Home &amp; Crematory | Honoring Every Life</title>
-
     <script>
       (function () {
         try {
@@ -21,7 +20,6 @@
         }
       })();
     </script>
-
     <link rel="stylesheet" href="assets/css/site.css" />
     <script src="assets/js/main.js" defer></script>
   </head>
@@ -57,13 +55,18 @@
               <span class="theme-toggle__icon" aria-hidden="true"></span>
               <span class="theme-toggle__label" data-theme-toggle-label>Dark mode</span>
             </button>
+            <button
+              class="btn btn-portal"
+              type="button"
+            >
+              Family Portal
+            </button>
           </li>
         </ul>
       </div>
     </header>
 
     <main id="top">
-      <!-- Hero section and other sections unchanged -->
       <section class="hero">
         <div class="container">
           <div class="hero-content">
@@ -77,20 +80,93 @@
             <div class="hero-actions">
               <a class="btn btn-primary" href="contact.html">Arrange a Service</a>
               <a class="btn btn-secondary" href="preplanning.html">Plan Ahead</a>
+              <button class="btn btn-portal" type="button">
+                Family Portal
+              </button>
             </div>
+          </div>
+          <div class="hero-highlights">
+            <article>
+              <h3>Licensed Funeral Directors</h3>
+              <p>
+                Experienced, thoughtful professionals committed to guiding your family with dignity and respect.
+              </p>
+            </article>
+            <article>
+              <h3>On-Site Crematory</h3>
+              <p>
+                Your loved one never leaves our care. Our state-of-the-art crematory ensures the highest standards
+                of stewardship.
+              </p>
+            </article>
+            <article>
+              <h3>Personal Tributes</h3>
+              <p>
+                From live streaming to custom keepsakes, we help you craft unique gatherings that reflect each life
+                beautifully.
+              </p>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- Services, Obituaries, Preplanning, Facility sections remain unchanged -->
-
-      <!-- PassageCare section — fully integrated -->
+      <!-- Family Portal Section inserted right after hero -->
       <section id="passagecare-section" class="section">
         <div class="container">
           <h2>Family Portal</h2>
           <div id="passagecare-root"></div>
         </div>
       </section>
+
+      <section class="section section-alt" id="services">
+        <div class="container">
+          <div class="section-header">
+            <span>Our Services</span>
+            <h2>Complete Funeral &amp; Cremation Care</h2>
+            <p>
+              Whether you prefer a traditional chapel service, an intimate gathering, or a celebration of life in a
+              meaningful location, we tailor every detail to honor your family's traditions.
+            </p>
+          </div>
+          <div class="card-grid">
+            <article class="card">
+              <h3>Funeral &amp; Memorial Services</h3>
+              <p>
+                Let us coordinate music, readings, clergy, veteran honors, and floral design to create a service that
+                shares your loved one's story.
+              </p>
+              <a class="card-link" href="services.html#funeral-services">Learn more</a>
+            </article>
+            <article class="card">
+              <h3>Cremation Options</h3>
+              <p>
+                Choose from private family viewings, witnessing ceremonies, and memorial packages with burial or
+                scattering assistance.
+              </p>
+              <a class="card-link" href="services.html#cremation">Explore cremation care</a>
+            </article>
+            <article class="card">
+              <h3>Celebrations of Life</h3>
+              <p>
+                Host a personalized gathering in our light-filled reception suite with catering, video tributes, and
+                keepsake displays.
+              </p>
+              <a class="card-link" href="services.html#celebrations">Plan a celebration</a>
+            </article>
+            <article class="card">
+              <h3>Aftercare Support</h3>
+              <p>
+                Access grief resources, local support groups, and guidance for estate and benefits paperwork long after
+                the service ends.
+              </p>
+              <a class="card-link" href="about.html#aftercare">Discover aftercare</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ...rest of your sections like obituaries, preplanning, facility... -->
+
     </main>
 
     <footer>
@@ -129,9 +205,17 @@
 
     <script>
       document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Smooth scroll from portal button to embedded section
+      document.querySelectorAll('.btn-portal').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const portal = document.getElementById('passagecare-section');
+          if (portal) portal.scrollIntoView({ behavior: 'smooth' });
+        });
+      });
     </script>
 
-    <!-- PassageCare embed script -->
+    <!-- Autonomous embed.js -->
     <script src="https://thepassagecare.com/embed.js" data-funeralhome-id="TEST_FH"></script>
   </body>
 </html>
