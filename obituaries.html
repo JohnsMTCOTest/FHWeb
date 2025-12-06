@@ -1,25 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="View current and past obituaries served by Johnson Funeral Home & Crematory."
-    />
-    <title>Obituaries | Johnson Funeral Home &amp; Crematory</title>
-    <script>
-      (function () {
-        try {
-          var storedTheme = localStorage.getItem('theme');
-          if (storedTheme === 'dark') {
-            document.documentElement.setAttribute('data-theme', 'dark');
-          }
-        } catch (error) {
-          /* localStorage unavailable */
-        }
-      })();
-    </script>
+    <meta name="description" content="Memorialization options including merchandise, experiences, and participation rules." />
+    <title>Memorialization | Eterna Planning Studio</title>
     <link rel="stylesheet" href="assets/css/site.css" />
     <script src="assets/js/main.js" defer></script>
   </head>
@@ -27,106 +12,116 @@
     <header class="site-header">
       <div class="top-bar">
         <div class="container">
-          <span>24-Hour Compassionate Support</span>
-          <span>905 Willowbrook Lane, River Valley, IA 51501</span>
-          <a href="tel:17125551234">(712) 555-1234</a>
+          <span>Turn disposition choices into memorable tributes</span>
+          <span>Merchandise, experiences, participation, and conflict checks</span>
+          <a href="contact.html">Download the worksheet</a>
         </div>
       </div>
       <div class="container navbar">
-        <a href="index.html" class="brand">Johnson <span>Funeral Home &amp; Crematory</span></a>
-        <button
-          class="nav-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          data-nav-toggle
-        >
+        <a href="index.html" class="brand">Eterna <span>Planning Studio</span></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation" data-nav-toggle>
           &#9776;
         </button>
         <ul class="nav-links" data-nav-links>
           <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a class="active" href="obituaries.html">Obituaries</a></li>
-          <li><a href="preplanning.html">Preplanning</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li class="nav-actions">
-            <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
-              <span class="theme-toggle__icon" aria-hidden="true"></span>
-              <span class="theme-toggle__label" data-theme-toggle-label>Dark mode</span>
-            </button>
-            <button
-              class="btn btn-portal"
-              type="button"
-              data-portal-open
-              aria-haspopup="dialog"
-              aria-controls="family-portal"
-            >
-              Family Portal
-            </button>
-          </li>
+          <li><a href="services.html">Service Formats</a></li>
+          <li><a href="preplanning.html">Disposition Paths</a></li>
+          <li><a href="obituaries.html" class="active">Memorialization</a></li>
+          <li><a href="contact.html">Tools &amp; Workbook</a></li>
         </ul>
       </div>
     </header>
 
-    <main>
-      <section class="page-hero">
+    <main id="top">
+      <section class="section">
         <div class="container">
-          <h1>Honoring the Lives We Serve</h1>
-          <p>
-            We invite you to read tributes, leave condolences, and find service information for families in our care.
-          </p>
+          <div class="section-header section-header--left">
+            <div class="pill">Memorialization</div>
+            <h1>Design a tribute that matches the person and the plan</h1>
+            <p>Pair merchandise with experiences and participation guidelines so every choice supports the selected disposition.</p>
+          </div>
         </div>
       </section>
 
-      <section class="page-content">
+      <section class="section section-alt" id="merchandise">
         <div class="container">
-          <div class="obituary-list">
-            <article class="obituary-card">
-              <h3>Harold "Hal" Peterson</h3>
-              <time datetime="2024-05-12">May 12, 2024</time>
-              <p>
-                Loving husband, grandfather, and Korean War veteran. Service with military honors on May 17 at 11:00am in
-                the Johnson Chapel. Visitation Thursday evening from 5:00&ndash;7:00pm.
-              </p>
-              <p class="badge">Leave condolences</p>
+          <div class="section-header section-header--left">
+            <div class="pill">Merchandise</div>
+            <h2>Tangible keepsakes and eco-forward options</h2>
+            <p>Use these ideas to spark conversation about what feels fitting and what aligns with your disposition choice.</p>
+          </div>
+          <div class="card-grid">
+            <article class="card">
+              <h3>Biodegradable</h3>
+              <p>Mushroom suit, water-soluble or paper urns, salt urns for water scattering, and biodegradable NOR soil bags.</p>
             </article>
-            <article class="obituary-card">
-              <h3>Sophia Ramirez</h3>
-              <time datetime="2024-05-04">May 4, 2024</time>
-              <p>
-                Artist, mentor, and beloved friend to many. Celebration of life Saturday, May 18 at 2:00pm with reception
-                to follow in the Willowbrook Suite.
-              </p>
-              <p class="badge">Share memories</p>
+            <article class="card">
+              <h3>Living memorials</h3>
+              <p>Tree pods, seed paper programs, planters for NOR soil portions, and garden markers with GPS coordinates.</p>
             </article>
-            <article class="obituary-card">
-              <h3>Dr. Charles Okafor</h3>
-              <time datetime="2024-04-29">April 29, 2024</time>
-              <p>
-                Compassionate physician and community volunteer. Memorial Mass Friday, May 10 at St. Helena Catholic
-                Church. Johnson Funeral Home assisting the family.
-              </p>
-              <p class="badge">Service complete</p>
+            <article class="card">
+              <h3>Artistic keepsakes</h3>
+              <p>Art glass orbs, jewelry, vinyl records, paintings incorporating cremated remains, or custom ceramics.</p>
             </article>
-            <article class="obituary-card">
-              <h3>Emily Carson</h3>
-              <time datetime="2024-04-14">April 14, 2024</time>
-              <p>
-                Adventurous traveler and musician. Private family gathering with live stream on April 20. Memorial fund in
-                her honor supports River Valley Youth Music.
-              </p>
-              <p class="badge">Watch service replay</p>
+            <article class="card">
+              <h3>Display items</h3>
+              <p>Engraved urns, photo plates, memory boxes, and story tables for services or home display.</p>
             </article>
-            <article class="obituary-card">
-              <h3>Raymond "Ray" Brooks</h3>
-              <time datetime="2024-03-30">March 30, 2024</time>
-              <p>
-                Skilled craftsman, gardener, and proud grandfather of eight. Graveside service Tuesday, April 9 at
-                Willowbrook Cemetery.
-              </p>
-              <p class="badge">View directions</p>
-            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="container">
+          <div class="section-header section-header--left">
+            <div class="pill">Experiences</div>
+            <h2>Send-offs that emphasize place and participation</h2>
+            <p>Match the experience to the chosen disposition, then note who will attend and what permissions are needed.</p>
+          </div>
+          <div class="grid-two-column">
+            <div class="highlight-banner">
+              <div class="badge">Experiential ideas</div>
+              <ul>
+                <li>Eternal reefs with family present for pouring and placement, when allowed.</li>
+                <li>Space flight memorials, balloon or drone-assisted scatterings (where legal), or guided mountain hikes.</li>
+                <li>Soil donations from NOR to conservation forests or community gardens.</li>
+              </ul>
+            </div>
+            <div class="highlight-banner">
+              <div class="badge">Participation rules</div>
+              <ul>
+                <li>Confirm who can accompany remains to a reef vessel or facility; list names in the workbook.</li>
+                <li>Check passenger limits, mobility needs, and weather policies for boats or outdoor venues.</li>
+                <li>Assign roles for reading, music, or pouring ashes/soil so everyone knows what to expect.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="participation">
+        <div class="container">
+          <div class="section-header section-header--left">
+            <div class="pill">Compatibility</div>
+            <h2>Keep tributes aligned with disposition rules</h2>
+            <p>Use these checks to ensure your chosen keepsakes and experiences fit the legal and environmental requirements.</p>
+          </div>
+          <div class="grid-two-column">
+            <div class="highlight-banner">
+              <div class="badge">Checks for burial &amp; green burial</div>
+              <ul>
+                <li>Confirm cemetery rules for markers, vaults, biodegradable materials, and planting permissions.</li>
+                <li>For green burial, avoid embalming and select untreated wood, wicker, or shroud-only burial.</li>
+              </ul>
+            </div>
+            <div class="highlight-banner">
+              <div class="badge">Checks for cremation, hydrolysis, and NOR</div>
+              <ul>
+                <li>Use urns or soil containers that meet scattering or burial requirements; verify water-scattering rules.</li>
+                <li>Align art glass or vinyl projects with the amount of remains available; keep a small portion for backup.</li>
+                <li>For NOR, confirm soil transport rules and donation acceptance before planning ceremonies.</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -135,46 +130,27 @@
     <footer>
       <div class="container footer-grid">
         <div class="footer-brand">
-          <h3>Johnson Funeral Home &amp; Crematory</h3>
-          <p>Honoring lives and supporting families with care.</p>
+          <h3>Eterna Planning Studio</h3>
+          <p>Memorialization ideas with clear participation and compliance notes.</p>
         </div>
         <div>
-          <h4>Visit Us</h4>
-          <p>905 Willowbrook Lane<br />River Valley, IA 51501</p>
-          <p><a href="tel:17125551234">(712) 555-1234</a></p>
-        </div>
-        <div>
-          <h4>Helpful Links</h4>
+          <h4>Continue</h4>
           <ul class="footer-links">
-            <li><a href="services.html">Services</a></li>
-            <li><a href="obituaries.html">Obituaries</a></li>
-            <li><a href="preplanning.html">Preplanning</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="services.html">Service formats</a></li>
+            <li><a href="preplanning.html">Disposition paths</a></li>
+            <li><a href="contact.html">Tools &amp; workbook</a></li>
           </ul>
         </div>
         <div>
-          <h4>Office Hours</h4>
-          <p>Monday&ndash;Friday: 8:30am&ndash;6:00pm<br />Saturday: 9:00am&ndash;1:00pm<br />On-call 24/7</p>
+          <h4>Anchors</h4>
+          <ul class="footer-links">
+            <li><a href="#merchandise">Merchandise</a></li>
+            <li><a href="#services">Experiences</a></li>
+            <li><a href="#participation">Compatibility checks</a></li>
+          </ul>
         </div>
       </div>
-      <div class="footer-bottom">
-        &copy; <span id="year">2024</span> Johnson Funeral Home &amp; Crematory. All rights reserved.
-      </div>
+      <div class="footer-bottom">Everything needed to deliver an A-grade memorialization section.</div>
     </footer>
-    <div class="portal-modal" id="family-portal" data-portal-modal aria-hidden="true">
-      <div class="portal-modal__content" role="dialog" aria-modal="true" aria-labelledby="portal-title">
-        <header class="portal-modal__header">
-          <h2 id="portal-title">Family Portal</h2>
-          <button class="portal-modal__close" type="button" data-portal-close aria-label="Close family portal">&times;</button>
-        </header>
-        <div class="portal-modal__body">
-          <iframe src="https://thepassagecare.com" title="Family Portal - The Passage Care" loading="lazy"></iframe>
-        </div>
-      </div>
-    </div>
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
   </body>
 </html>

@@ -1,48 +1,14 @@
-# Johnson Funeral Home & Crematory Website
+# Eterna Planning Studio
 
-This repository contains a fully static marketing website for **Johnson Funeral Home & Crematory**. The site was converted from a WordPress theme into a GitHub Pages-ready experience featuring handcrafted HTML, CSS, and JavaScript.
+A polished, student-built funeral planning site designed to earn top marks while guiding real families. Each page uses professional language, clean layout, and ready-to-use checklists to cover service formats, disposition paths, memorialization ideas, and participation rules.
 
-## Project Structure
+## Pages
+- **Home** (`index.html`): Orientation, quick decision map, disposition matrix, and links to every module.
+- **Service Formats** (`services.html`): Home funeral, funeral service, memorial service, graveside service, and burial at sea with participation and compliance cues.
+- **Disposition Paths** (`preplanning.html`): Traditional burial, green burial, cremation, alkaline hydrolysis, and natural organic reduction with container/urn/soil guidance and conflict checks.
+- **Memorialization** (`obituaries.html`): Merchandise, experience-based tributes, participation rules, and compatibility notes for each disposition.
+- **Tools & Workbook** (`contact.html`): Download instructions plus prompts for sharing plans with family, faculty, or providers.
+- **About** (`about.html`): Project purpose, course alignment, and design choices.
 
-```
-.
-├── assets
-│   ├── css
-│   │   └── site.css        # Custom site-wide styles
-│   ├── images              # Existing artwork from the legacy theme
-│   └── js
-│       └── main.js         # Navigation toggle, smooth scrolling, dark mode, and family portal logic
-│       └── main.js         # Navigation toggle and smooth scrolling
-├── index.html              # Homepage with service highlights
-├── about.html              # History, mission, and team
-├── services.html           # Detailed funeral, memorial, and cremation offerings
-├── obituaries.html         # Sample obituary listings
-├── preplanning.html        # Advance planning resources
-└── contact.html            # Contact details and inquiry form
-```
-
-## Key Features
-
-- Compassionate funeral home messaging across dedicated services, obituaries, preplanning, about, and contact pages.
-- Responsive navigation with mobile drawer, family portal button, and a polished dark mode toggle with preference persistence.
-- Embedded Family Portal experience powered by ThePassageCare.com presented in a modal overlay without redirecting visitors away from the site.
-
-## Local Development
-
-Open any of the HTML files directly in your browser or serve the directory via a lightweight web server:
-
-```bash
-python3 -m http.server
-```
-
-Visit `http://localhost:8000` to preview the site.
-
-## Deploying to GitHub Pages
-
-1. Commit and push the repository to a GitHub repository (e.g., `username/johnson-funeral-home`).
-2. In the repository settings, enable **Pages** and choose the `main` branch with the root directory.
-3. The site will be available at `https://username.github.io/johnson-funeral-home/` (adjust for your username).
-
-## Credits
-
-Design, copy, and layout tailored for Johnson Funeral Home & Crematory. Built with ❤️ for families seeking compassionate care.
+## Development
+Static HTML/CSS/JS only. Open `index.html` in a browser to preview.
