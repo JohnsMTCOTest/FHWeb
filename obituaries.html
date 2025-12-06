@@ -1,25 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="View current and past obituaries served by Johnson Funeral Home & Crematory."
+      content="Memorialization options including merchandise, experiential services, and family participation ideas."
     />
-    <title>Obituaries | Johnson Funeral Home &amp; Crematory</title>
-    <script>
-      (function () {
-        try {
-          var storedTheme = localStorage.getItem('theme');
-          if (storedTheme === 'dark') {
-            document.documentElement.setAttribute('data-theme', 'dark');
-          }
-        } catch (error) {
-          /* localStorage unavailable */
-        }
-      })();
-    </script>
+    <title>Memorialization | Personal Funeral Planning Guide</title>
     <link rel="stylesheet" href="assets/css/site.css" />
     <script src="assets/js/main.js" defer></script>
   </head>
@@ -27,13 +15,13 @@
     <header class="site-header">
       <div class="top-bar">
         <div class="container">
-          <span>24-Hour Compassionate Support</span>
-          <span>905 Willowbrook Lane, River Valley, IA 51501</span>
-          <a href="tel:17125551234">(712) 555-1234</a>
+          <span>Design a tribute that feels personal</span>
+          <span>Merchandise, services, and participation ideas</span>
+          <a href="contact.html">Download the personalization checklist</a>
         </div>
       </div>
       <div class="container navbar">
-        <a href="index.html" class="brand">Johnson <span>Funeral Home &amp; Crematory</span></a>
+        <a href="index.html" class="brand">Personal <span>Funeral Planning Guide</span></a>
         <button
           class="nav-toggle"
           type="button"
@@ -45,88 +33,127 @@
         </button>
         <ul class="nav-links" data-nav-links>
           <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a class="active" href="obituaries.html">Obituaries</a></li>
-          <li><a href="preplanning.html">Preplanning</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li class="nav-actions">
-            <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
-              <span class="theme-toggle__icon" aria-hidden="true"></span>
-              <span class="theme-toggle__label" data-theme-toggle-label>Dark mode</span>
-            </button>
-            <button
-              class="btn btn-portal"
-              type="button"
-              data-portal-open
-              aria-haspopup="dialog"
-              aria-controls="family-portal"
-            >
-              Family Portal
-            </button>
-          </li>
+          <li><a href="services.html">Service Options</a></li>
+          <li><a href="preplanning.html">Disposition Paths</a></li>
+          <li><a href="obituaries.html" class="active">Memorialization</a></li>
+          <li><a href="contact.html">Planning Guides</a></li>
         </ul>
       </div>
     </header>
 
-    <main>
-      <section class="page-hero">
+    <main id="top">
+      <section class="section">
         <div class="container">
-          <h1>Honoring the Lives We Serve</h1>
-          <p>
-            We invite you to read tributes, leave condolences, and find service information for families in our care.
-          </p>
+          <div class="section-header section-header--left">
+            <span>Memorialization</span>
+            <h1>Create Keepsakes and Experiences</h1>
+            <p>
+              Use the options below to personalize the tribute, even if a funeral home is not involved. Many items pair
+              well with cremation, hydrolysis, burial, or natural organic reduction. Ask providers about participation
+              (family ride-alongs, pouring ashes into reef molds, or attending soil donations).
+            </p>
+          </div>
         </div>
       </section>
 
-      <section class="page-content">
+      <section class="section section-alt" id="merchandise">
         <div class="container">
-          <div class="obituary-list">
-            <article class="obituary-card">
-              <h3>Harold "Hal" Peterson</h3>
-              <time datetime="2024-05-12">May 12, 2024</time>
-              <p>
-                Loving husband, grandfather, and Korean War veteran. Service with military honors on May 17 at 11:00am in
-                the Johnson Chapel. Visitation Thursday evening from 5:00&ndash;7:00pm.
-              </p>
-              <p class="badge">Leave condolences</p>
+          <div class="section-header section-header--left">
+            <span>Merchandise</span>
+            <h2>Tangible Memorial Pieces</h2>
+            <p>Select one or combine a few to reflect hobbies, spirituality, or environmental values.</p>
+          </div>
+          <div class="card-grid">
+            <article class="card">
+              <h3>Mushroom Suit</h3>
+              <p>Biodegradable suit embedded with mushroom spores to support natural decomposition and soil health.</p>
             </article>
-            <article class="obituary-card">
-              <h3>Sophia Ramirez</h3>
-              <time datetime="2024-05-04">May 4, 2024</time>
-              <p>
-                Artist, mentor, and beloved friend to many. Celebration of life Saturday, May 18 at 2:00pm with reception
-                to follow in the Willowbrook Suite.
-              </p>
-              <p class="badge">Share memories</p>
+            <article class="card">
+              <h3>Tree Pods &amp; Planters</h3>
+              <p>Biodegradable pods that hold cremated remains or NOR soil with a tree seedling for living memorials.</p>
             </article>
-            <article class="obituary-card">
-              <h3>Dr. Charles Okafor</h3>
-              <time datetime="2024-04-29">April 29, 2024</time>
-              <p>
-                Compassionate physician and community volunteer. Memorial Mass Friday, May 10 at St. Helena Catholic
-                Church. Johnson Funeral Home assisting the family.
-              </p>
-              <p class="badge">Service complete</p>
+            <article class="card">
+              <h3>Art Glass &amp; Jewelry</h3>
+              <p>Small portions of cremated remains or hydrolysis powder fused into glass or wearable pieces.</p>
             </article>
-            <article class="obituary-card">
-              <h3>Emily Carson</h3>
-              <time datetime="2024-04-14">April 14, 2024</time>
-              <p>
-                Adventurous traveler and musician. Private family gathering with live stream on April 20. Memorial fund in
-                her honor supports River Valley Youth Music.
-              </p>
-              <p class="badge">Watch service replay</p>
+            <article class="card">
+              <h3>Vinyl Records</h3>
+              <p>Press ashes into custom records with favorite songs, spoken stories, or guided meditations.</p>
             </article>
-            <article class="obituary-card">
-              <h3>Raymond "Ray" Brooks</h3>
-              <time datetime="2024-03-30">March 30, 2024</time>
-              <p>
-                Skilled craftsman, gardener, and proud grandfather of eight. Graveside service Tuesday, April 9 at
-                Willowbrook Cemetery.
-              </p>
-              <p class="badge">View directions</p>
+            <article class="card">
+              <h3>Eternal Reef Kits</h3>
+              <p>Mix cremated remains into a reef mold that is later placed at sea as marine habitat.</p>
             </article>
+            <article class="card">
+              <h3>Dispersing Walking Stick</h3>
+              <p>Walking stick with a chamber for controlled scattering along favorite trails.</p>
+            </article>
+            <article class="card">
+              <h3>Canvas or Paintings</h3>
+              <p>Artists can incorporate cremated remains into paint for a custom artwork or portrait.</p>
+            </article>
+            <article class="card">
+              <h3>Urn Variety</h3>
+              <p>Wood, metal, ceramic, biodegradable paper/salt, water-soluble urns, or keepsake minis for sharing.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="container">
+          <div class="section-header section-header--left">
+            <span>Services &amp; Experiences</span>
+            <h2>Memorial Events and Destinations</h2>
+            <p>Blend these ideas with any disposition choice to make the farewell memorable.</p>
+          </div>
+          <div class="grid-two-column">
+            <div class="highlight-banner">
+              <div class="badge">Experiences</div>
+              <ul>
+                <li>Space flight: send a symbolic portion of remains on a memorial flight.</li>
+                <li>Eternal reefs: family can assist with the pour and accompany the reef placement when policies allow.</li>
+                <li>Sea scattering: sail with a licensed captain; combine with readings, flowers, and biodegradable urns.</li>
+                <li>Soil donation: gift NOR soil to a forest, garden, or conservation project.</li>
+              </ul>
+            </div>
+            <div class="highlight-banner">
+              <div class="badge">Service touches</div>
+              <ul>
+                <li>Memory tables with favorite items, letters, or recipes.</li>
+                <li>Guest participation: speak, sing, paint, or place soil/flowers during the ceremony.</li>
+                <li>Livestreaming for remote guests or recording stories for a digital archive.</li>
+                <li>Combining rituals: viewing before a green burial, or a memorial after NOR soil is ready.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="participation">
+        <div class="container">
+          <div class="section-header section-header--left">
+            <span>Participation</span>
+            <h2>Ways Family and Friends Can Be Involved</h2>
+            <p>Clarify expectations early to honor cultural, spiritual, and personal boundaries.</p>
+          </div>
+          <div class="grid-two-column">
+            <div class="highlight-banner">
+              <div class="badge">Hands-on options</div>
+              <ul>
+                <li>Accompany remains to a reef deployment or burial at sea (when vessel policies allow).</li>
+                <li>Carry or lower the casket, shroud, urn, or soil during graveside or green burials.</li>
+                <li>Pour ashes into reef molds or biodegradable urns; place soil at a tree planting.</li>
+              </ul>
+            </div>
+            <div class="highlight-banner">
+              <div class="badge">Personal touches</div>
+              <ul>
+                <li>Write messages on the container, urn, or reef mold.</li>
+                <li>Create playlists, photo loops, or art stations for guests to contribute.</li>
+                <li>Invite a facilitator to help balance storytelling with quiet reflection.</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -135,46 +162,34 @@
     <footer>
       <div class="container footer-grid">
         <div class="footer-brand">
-          <h3>Johnson Funeral Home &amp; Crematory</h3>
-          <p>Honoring lives and supporting families with care.</p>
+          <h3>Personal Funeral Planning Guide</h3>
+          <p>Use these ideas to personalize any service or disposition choice.</p>
         </div>
         <div>
-          <h4>Visit Us</h4>
-          <p>905 Willowbrook Lane<br />River Valley, IA 51501</p>
-          <p><a href="tel:17125551234">(712) 555-1234</a></p>
+          <h4>Next Step</h4>
+          <p>Download the personalization checklist to capture merchandise and experience choices.</p>
         </div>
         <div>
-          <h4>Helpful Links</h4>
+          <h4>Navigation</h4>
           <ul class="footer-links">
-            <li><a href="services.html">Services</a></li>
-            <li><a href="obituaries.html">Obituaries</a></li>
-            <li><a href="preplanning.html">Preplanning</a></li>
+            <li><a href="services.html">Service Options</a></li>
+            <li><a href="preplanning.html">Disposition Paths</a></li>
+            <li><a href="contact.html">Planning Guides</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
         <div>
-          <h4>Office Hours</h4>
-          <p>Monday&ndash;Friday: 8:30am&ndash;6:00pm<br />Saturday: 9:00am&ndash;1:00pm<br />On-call 24/7</p>
+          <h4>Reminder</h4>
+          <p>Confirm provider policies for ride-alongs, witnessing, and artifact creation timelines.</p>
         </div>
       </div>
       <div class="footer-bottom">
-        &copy; <span id="year">2024</span> Johnson Funeral Home &amp; Crematory. All rights reserved.
+        &copy; <span id="year">2024</span> Personal Funeral Planning Guide. All rights reserved.
       </div>
     </footer>
-    <div class="portal-modal" id="family-portal" data-portal-modal aria-hidden="true">
-      <div class="portal-modal__content" role="dialog" aria-modal="true" aria-labelledby="portal-title">
-        <header class="portal-modal__header">
-          <h2 id="portal-title">Family Portal</h2>
-          <button class="portal-modal__close" type="button" data-portal-close aria-label="Close family portal">&times;</button>
-        </header>
-        <div class="portal-modal__body">
-          <iframe src="https://thepassagecare.com" title="Family Portal - The Passage Care" loading="lazy"></iframe>
-        </div>
-      </div>
-    </div>
+
     <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
+      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </body>
 </html>

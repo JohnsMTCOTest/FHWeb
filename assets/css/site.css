@@ -24,26 +24,6 @@
   color-scheme: light;
 }
 
-:root[data-theme="dark"] {
-  --primary-900: #d8e4f9;
-  --primary-800: #a9c5ec;
-  --primary-600: #82a2d3;
-  --accent-500: #f1d48e;
-  --accent-400: #f7e4aa;
-  --body-bg: #050b16;
-  --body-gradient: linear-gradient(180deg, #050b16 0%, #0c1627 60%, #0f1c30 100%);
-  --surface: rgba(16, 27, 44, 0.95);
-  --surface-elevated: rgba(20, 34, 54, 0.95);
-  --surface-alt: rgba(23, 37, 58, 0.85);
-  --text: #e7edf6;
-  --text-soft: #c3cde0;
-  --text-muted: #95a3bc;
-  --border-subtle: rgba(193, 212, 235, 0.18);
-  --shadow-soft: 0 22px 45px rgba(5, 12, 24, 0.65);
-  --shadow-subtle: 0 12px 32px rgba(5, 12, 24, 0.4);
-  color-scheme: dark;
-}
-
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -56,10 +36,6 @@ body {
   background: var(--body-gradient);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
-}
-
-body.portal-open {
-  overflow: hidden;
 }
 
 a {
@@ -113,11 +89,6 @@ img {
   backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(17, 39, 66, 0.08);
   transition: background 0.35s ease, border-color 0.35s ease;
-}
-
-:root[data-theme="dark"] .site-header {
-  background: rgba(6, 13, 24, 0.85);
-  border-color: rgba(193, 212, 235, 0.14);
 }
 
 .navbar {
@@ -212,44 +183,6 @@ img {
   transform: scaleX(1);
 }
 
-.nav-links li.nav-actions {
-  gap: 0.75rem;
-  margin-left: 1rem;
-}
-
-.nav-links button {
-  font: inherit;
-  color: inherit;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.theme-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  border-radius: 999px;
-  border: 1px solid var(--border-subtle);
-  padding: 0.45rem 0.95rem;
-  background: var(--surface);
-  transition: var(--transition);
-}
-
-.theme-toggle:hover {
-  border-color: var(--accent-500);
-  color: var(--primary-900);
-}
-
-.theme-toggle__icon {
-  display: inline-flex;
-  width: 1.35rem;
-  height: 1.35rem;
-  border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, var(--accent-400) 0%, var(--accent-500) 45%, transparent 60%);
-  box-shadow: inset 0 0 0 1px rgba(17, 39, 66, 0.12);
-}
-
 .btn {
   display: inline-flex;
   align-items: center;
@@ -284,19 +217,6 @@ img {
 .btn-secondary:hover {
   border-color: var(--accent-500);
   color: var(--primary-900);
-  box-shadow: var(--shadow-subtle);
-}
-
-.btn-portal {
-  border: 1px solid var(--accent-500);
-  background: transparent;
-  color: var(--accent-500);
-  padding-inline: 1.35rem;
-}
-
-.btn-portal:hover {
-  background: var(--accent-500);
-  color: #1b2739;
   box-shadow: var(--shadow-subtle);
 }
 
@@ -867,70 +787,6 @@ footer {
   background: rgba(0, 0, 0, 0.08);
 }
 
-.portal-modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(4, 10, 20, 0.75);
-  display: grid;
-  place-items: center;
-  padding: 2rem;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.25s ease, visibility 0.25s ease;
-  z-index: 1200;
-}
-
-.portal-modal.is-open {
-  visibility: visible;
-  opacity: 1;
-}
-
-.portal-modal__content {
-  background: var(--surface);
-  border-radius: 1.5rem;
-  width: min(92vw, 880px);
-  max-height: min(85vh, 720px);
-  display: flex;
-  flex-direction: column;
-  border: 1px solid var(--border-subtle);
-  box-shadow: var(--shadow-soft);
-}
-
-.portal-modal__header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.5rem 1.75rem;
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.portal-modal__header h2 {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  margin: 0;
-}
-
-.portal-modal__close {
-  border: none;
-  background: transparent;
-  font-size: 1.75rem;
-  color: var(--text);
-  cursor: pointer;
-}
-
-.portal-modal__body {
-  flex: 1 1 auto;
-  padding: 0;
-}
-
-.portal-modal__body iframe {
-  width: 100%;
-  height: 100%;
-  min-height: 480px;
-  border: none;
-  border-radius: 0 0 1.5rem 1.5rem;
-}
-
 @media (max-width: 960px) {
   .nav-toggle {
     display: inline-flex;
@@ -959,18 +815,6 @@ footer {
     transform: translateY(0) scale(1);
     pointer-events: auto;
   }
-
-  .nav-links li.nav-actions {
-    flex-direction: column;
-    align-items: stretch;
-    margin-left: 0;
-  }
-
-  .nav-links li.nav-actions .btn,
-  .nav-links li.nav-actions .theme-toggle {
-    width: 100%;
-    justify-content: center;
-  }
 }
 
 @media (max-width: 720px) {
@@ -994,14 +838,6 @@ footer {
 
   .footer-links {
     justify-items: center;
-  }
-
-  .portal-modal {
-    padding: 1.25rem;
-  }
-
-  .portal-modal__body iframe {
-    min-height: 360px;
   }
 }
 
