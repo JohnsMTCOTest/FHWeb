@@ -11,7 +11,6 @@ This repository contains a fully static marketing website for **Johnson Funeral 
 │   │   └── site.css        # Custom site-wide styles
 │   ├── images              # Existing artwork from the legacy theme
 │   └── js
-│       └── main.js         # Navigation toggle, smooth scrolling, dark mode, and family portal logic
 │       └── main.js         # Navigation toggle and smooth scrolling
 ├── index.html              # Homepage with service highlights
 ├── about.html              # History, mission, and team
@@ -24,8 +23,7 @@ This repository contains a fully static marketing website for **Johnson Funeral 
 ## Key Features
 
 - Compassionate funeral home messaging across dedicated services, obituaries, preplanning, about, and contact pages.
-- Responsive navigation with mobile drawer, family portal button, and a polished dark mode toggle with preference persistence.
-- Embedded Family Portal experience powered by ThePassageCare.com presented in a modal overlay without redirecting visitors away from the site.
+- Responsive navigation with mobile drawer and smooth in-page scrolling.
 
 ## Local Development
 
